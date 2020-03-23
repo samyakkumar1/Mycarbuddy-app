@@ -1,6 +1,8 @@
 import React from 'react'
-import {View,Text,StyleSheet,TouchableOpacity,TouchableWithoutFeedback, Animated,Image,Alert} from 'react-native'
+import {View,Text,StyleSheet,TouchableOpacity,TouchableWithoutFeedback, Animated,Image,Alert,Button} from 'react-native'
 import * as firebase from 'firebase'
+import Btnwithbg from './ButtonWithBackground'
+
 
 
 export default class HomeScreen extends React.Component {
@@ -36,15 +38,14 @@ export default class HomeScreen extends React.Component {
     }
 
     render() {
-        return (
+        return  (
+            <View style={styles.container}>
+                <Text style={styles.title}>Select Vehicle</Text>
+                <Btnwithbg text='ADD CAR' color='#1E90FF'/>
+    
+
+
             <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                backgroundColor: 'white'
-
-            }}>
-
-                <View style={{
 
                     position: 'absolute',
                     alignSelf: 'center',
@@ -177,6 +178,21 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      title:{
+        marginTop:-100,
+        fontWeight:'bold',
+        fontSize:20,
+        textAlign:'center',
+        margin:10,
+        color:'#3E4958'
+    
+      },
 
     MainContainer: {
         flex: 1,
